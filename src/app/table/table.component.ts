@@ -35,7 +35,7 @@ export class TableComponent implements OnInit, AfterViewInit  {
 
 openAdduser() {
 
-  this.dialog.open(AddUserComponent, {width: '400px' , height: '500px'})
+  this.dialog.open(AddUserComponent, {width: '400px' , height: '800px'})
 }
 
 doFilter(value: string) {

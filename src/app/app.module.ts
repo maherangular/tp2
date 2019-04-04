@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule, MatGridListModule, MatMenuModule, MatIconModule, MatToolbarModule, MatSidenavModule, MatListModule, MatNativeDateModule, MatTableModule, MatPaginatorModule, MatSortModule} from '@angular/material';
+import {MatInputModule, MatGridListModule, MatMenuModule, MatIconModule, MatToolbarModule, MatSidenavModule, MatListModule, MatNativeDateModule, MatTableModule, MatPaginatorModule, MatSortModule, MatDialogModule} from '@angular/material';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import { HomeComponent } from './home/home.component';
@@ -48,7 +48,9 @@ import { AddUserComponent } from './add-user/add-user.component';
     MatNativeDateModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule 
+    MatSortModule ,
+    MatCardModule,
+    MatDialogModule
 
     
     
