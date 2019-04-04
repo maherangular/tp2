@@ -8,6 +8,7 @@ import { TableComponent } from './table/table.component';
 const routes: Routes = [
   {path : 'login' , component: LoginComponent } ,
 {path : 'nav' , component: Nav2Component , children: [{path: 'table' , component: TableComponent}] } ,
+{path : 'logivn' , component: LoginComponent } ,
 
 ];
 
