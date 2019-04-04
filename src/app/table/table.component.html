@@ -1,0 +1,60 @@
+<div class="mat-elevation-z8">
+  
+  <h3><i class="fas fa-user"></i>Customers</h3>
+  <input matInput type="text" (keyup)="doFilter($event.target.value)" placeholder="Filter">
+
+  <button mat-button style="float: right" (click)="openAdduser()"> Add new customer</button>
+  
+  <table mat-table class="full-width-table" [dataSource]="dataSource"
+   matSort aria-label="Elements">
+    
+    
+    <!-- Id Column -->
+    <ng-container matColumnDef="icon">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>icon</th>
+      <td mat-cell *matCellDef="let row"><i class="{{row.icon}}"></i></td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="firstname">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Firstname</th>
+      <td mat-cell *matCellDef="let row">{{row.firstname}}</td>
+    </ng-container>
+     <!-- Name Column -->
+     <ng-container matColumnDef="Lastname">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>lastname</th>
+      <td mat-cell *matCellDef="let row">{{row.lastname}}</td>
+    </ng-container>
+     <!-- Name Column -->
+     <ng-container matColumnDef="Address">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>address</th>
+      <td mat-cell *matCellDef="let row">{{row.address}}</td>
+    </ng-container>
+     <!-- Name Column -->
+     <ng-container matColumnDef="City">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>city</th>
+      <td mat-cell *matCellDef="let row">{{row.city}}</td>
+    </ng-container>
+     <!-- Name Column -->
+     <ng-container matColumnDef="State">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>state</th>
+      <td mat-cell *matCellDef="let row">{{row.state}}</td>
+    </ng-container>
+     <!-- Name Column -->
+     <ng-container matColumnDef="Order Total">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>ordertotal</th>
+      <td mat-cell *matCellDef="let row">{{row.ordertotal}}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    
+  </table>
+
+  <mat-paginator #paginator
+      [length]="dataSource.data.length"
+      [pageIndex]="0"
+      [pageSize]="10"
+      [pageSizeOptions]="[10, 20, 30, 40]">
+  </mat-paginator>
+</div>

@@ -1,0 +1,17 @@
+<mat-card>
+
+
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Username"  #user>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Password" #pass>
+  </mat-form-field>
+
+  <button mat-button  (click)="login(user.value , pass.value)">Login</button>
+
+</form>
+
+</mat-card>
